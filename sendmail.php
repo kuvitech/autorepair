@@ -13,11 +13,15 @@ if ( isset($_POST['email']) && isset($_POST['name']) && isset($_POST['message'])
   }
 
 $headers = 'From: ' . $_POST["name"] . '<' . $_POST["email"] . '>' . "\r\n" .
-    'Reply-To: ' . $_POST["email"] . "\r\n" .
-    'X-Mailer: PHP/' . phpversion();
-
+    'Reply-To: ' . $_POST["email"] . "\r\n";
+$message = 'Booking for ' . $_POST["services"] . "\r\n" . 'Name :' . $_POST["name"]
+. "\r\n" . 'Vehicle Number :' . $_POST["vehiclenumber"]
+. "\r\n" . 'Mobile Number :' . $_POST["contactno"]
+. "\r\n" . 'Appointment Date :' . $_POST["appointmentDt"]
+. "\r\n" . 'Appointment Time :' . $_POST["appointmentTime"]
+. "\r\n" . 'Message :' . $_POST['message'];
   //
-  mail( "kuvitech@gmail.com", $_POST['message'], $headers );
+  mail( "kuvitech@gmail.com", $message, $headers );
  
   //      ^
   //  Replace with your email 
