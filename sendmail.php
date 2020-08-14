@@ -21,7 +21,7 @@ $message = 'Booking for ' . $_POST["services"] . "\r\n" . 'Name :' . $_POST["nam
 . "\r\n" . 'Appointment Time :' . $_POST["appointmentTime"]
 . "\r\n" . 'Message :' . $_POST['message'];
   //
-  mail( "kuvitech@gmail.com", $message, $headers );
+  mail( "kuvitech@gmail.com", "Booking from Web Site", $message, $headers );
  
   //      ^
   //  Replace with your email 
