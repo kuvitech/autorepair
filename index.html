@@ -359,7 +359,7 @@
     			<div class="col-md-12 col-lg-6 half p-3 py-5 pl-lg-5 ftco-animate heading-section heading-section-white">
     				<span class="subheading">Booking an Appointment</span>
     				<h2 class="mb-4">Free Consultation</h2>
-    				<form action="#" method="post" class="appointment">
+    				<form method="post" action="sendmail.php" class="appointment">
     					<div class="row">
     						<div class="col-md-12">
 									<div class="form-group">
@@ -942,18 +942,3 @@
     
   </body>
 </html>
-<?php 
-if(isset($_POST['submit'])){
-    $to = "kuvitech@gmail.com"; // this is the sender's Email address
-    $from = $_POST['email']; // this is your Email address
-    $name = $_POST['name'];
-    $subject = "Appointment Booking";
-    $message = $name . " " wrote the following:" . "\n\n" . $_POST['message'];
-
-    $headers = "From:" . $from;
-    $headers2 = "From:" . $to;
-    mail($to,$subject,$message,$headers);
-    echo "Mail Sent. Thank you " . $first_name . ", we will contact you shortly.";
-    // You can also use header('Location: thank_you.php'); to redirect to another page.
-    }
-?>
