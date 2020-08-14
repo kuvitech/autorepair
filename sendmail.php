@@ -19,10 +19,12 @@ $message = 'Booking for ' . $_POST["services"] . "\r\n" . 'Name :' . $_POST["nam
 . "\r\n" . 'Mobile Number :' . $_POST["contactno"]
 . "\r\n" . 'Appointment Date :' . $_POST["appointmentDt"]
 . "\r\n" . 'Appointment Time :' . $_POST["appointmentTime"]
-. "\r\n" . 'Message :' . $_POST['message'];
+. "\r\n" . 'Message :' . $_POST['message']
+. "\r\n" . 'Thank You';
 $subject = "Booking from Web Site";
 
 mail( "kuvitech@gmail.com", $subject, $message, $headers );
+echo '<script>alert("Booked successfully, Thank you for choosing us")</script>'; 
 header("Location: http://www.skcarcare.in/");
 }
 ?>
