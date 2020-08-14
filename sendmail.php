@@ -23,7 +23,7 @@ $message = 'Booking for ' . $_POST["services"] . "\r\n" . 'Name :' . $_POST["nam
 . "\r\n" . 'Thank You';
 $subject = "Booking from Web Site";
 
-mail( "kuvitech@gmail.com", $subject, $message, $headers );
+mail( "skcarcare17@gmail.com", $subject, $message, $headers );
 echo '<script>alert("Booked successfully, Thank you for choosing us")</script>'; 
 // header("Location: http://www.skcarcare.in/");
 }
