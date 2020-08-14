@@ -12,7 +12,7 @@ if ( isset($_POST['email']) && isset($_POST['name']) && isset($_POST['message'])
     }
   }
 
-$headers = 'From: ' . $_POST["name"] . '<' . $_POST["email"] . '>' . "\r\n" .
+$headers = 'From: ' . '<' . $_POST["email"] . '>' . "\r\n" .
     'Reply-To: ' . $_POST["email"] . "\r\n";
 $message = 'Booking for ' . $_POST["services"] . "\r\n" . 'Name :' . $_POST["name"]
 . "\r\n" . 'Vehicle Number :' . $_POST["vehiclenumber"]
@@ -20,10 +20,9 @@ $message = 'Booking for ' . $_POST["services"] . "\r\n" . 'Name :' . $_POST["nam
 . "\r\n" . 'Appointment Date :' . $_POST["appointmentDt"]
 . "\r\n" . 'Appointment Time :' . $_POST["appointmentTime"]
 . "\r\n" . 'Message :' . $_POST['message'];
-  //
-  mail( "kuvitech@gmail.com", "Booking from Web Site", $message, $headers );
- 
-  //      ^
-  //  Replace with your email 
+$subject = "Booking from Web Site";
+
+mail( "kuvitech@gmail.com", $subject, $message, $headers );
+header("Location: http://www.skcarcare.in/");
 }
 ?>
