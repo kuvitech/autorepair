@@ -30,7 +30,7 @@
 	    <div class="container">
 				<div class="row justify-content-between">
 					<div class="col-md-3 d-flex align-items-center">
-						<a class="navbar-brand" href="index.html"><span><img src="images/car logo new one copy.png"style="width:300px;height:100px;"></span></a>
+						<a class="navbar-brand" href="index.html"><span><img src="images/car logo new one copygrey.png"style="width:400px;height:150px;"></span></a>
 					</div>
 					
 				        </div>
@@ -171,7 +171,7 @@
     			<div class="col-md-12 col-lg-6 half p-3 py-5 pl-lg-5 ftco-animate heading-section heading-section-white">
     				<span class="subheading">Booking an Appointment</span>
     				<h2 class="mb-4">Free Consultation</h2>
-    				<form action="#" class="appointment">
+    				<form method="post" action="sendmail.php" class="appointment">
     					<div class="row">
     						<div class="col-md-12">
 									<div class="form-group">
@@ -196,12 +196,22 @@
 								</div>
 								<div class="col-md-6">
 									<div class="form-group">
-			              <input type="text" class="form-control" placeholder="Your Name">
+			              <input type="text" name="name" class="form-control" placeholder="Your Name">
 			            </div>
 								</div>
 								<div class="col-md-6">
 									<div class="form-group">
-			              <input type="text" class="form-control" placeholder="Vehicle number">
+			              <input type="text" name="vehiclenumber" class="form-control" placeholder="Vehicle number">
+			            </div>
+								</div>
+								<div class="col-md-6">
+									<div class="form-group">
+			              <input type="email" name="email" required class="form-control" placeholder="Email">
+			            </div>
+								</div>
+								<div class="col-md-6">
+									<div class="form-group">
+			              <input type="text" name="contactno" class="form-control" placeholder="Mobile Number">
 			            </div>
 								</div>
 								<div class="col-md-6">
@@ -401,7 +411,7 @@
         <div class="row mb-5">
           <div class="col-md-6 col-lg">
             <div class="ftco-footer-widget mb-4">
-              <h2 class="logo"><a href="#"><span><img src="images/car logo new one copy.png"style="width:300px;height:200px;"></span></a></h2>
+              <h2 class="logo"><a href="#"><span><img src="images/car logo new one orange.png"style="width:300px;height:200px;"></span></a></h2>
               <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-4">
                 <li class="ftco-animate"><a href="#"><span class="fa fa-twitter"></span></a></li>
                 <li class="ftco-animate"><a href="#"><span class="fa fa-facebook"></span></a></li>
